@@ -60,7 +60,7 @@ namespace Backend.Api.Controllers
                 var tokenHandler = new JwtSecurityTokenHandler();
                 var createdToken = tokenHandler.CreateToken(tokenDescriptor);
                 string bearer_token = tokenHandler.WriteToken(createdToken);
-                return Ok (bearer_token);
+                return Ok (new {bearer_token});
                 
             }
             else 

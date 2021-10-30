@@ -7,11 +7,13 @@ using Backend.Api.Data;
 using Backend.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Backend.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class EmpleadosController : ControllerBase
     {
         private readonly DataContext _context;
